@@ -1,4 +1,4 @@
-FROM maven:3.5-jdk-8-alpine AS build
+FROM harbor.21vv.cn/kzf/maven:3.5-jdk-8-alpine AS build
 
 WORKDIR /code
 
@@ -12,7 +12,7 @@ RUN mvn --batch-mode verify
 COPY ["src/main", "/code/src/main"]
 RUN mvn --batch-mode package
 
-FROM openjdk:8-jre-alpine
+FROM harbor.21vv.cn/kzf/openjdk:8-jre-alpine
 
 COPY --from=build /code/target/worker-1.0-SNAPSHOT.jar /worker-jar-with-dependencies.jar
 
