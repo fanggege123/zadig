@@ -8,6 +8,7 @@ COPY pom.xml /code/pom.xml
 RUN mvn --batch-mode dependency:resolve
 RUN mvn --batch-mode verify
 
+#asdjflsjkg
 # Adding source, compile and package into a fat jar
 COPY ["src/main", "/code/src/main"]
 RUN mvn --batch-mode package
