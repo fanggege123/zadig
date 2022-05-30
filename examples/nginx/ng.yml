@@ -20,3 +20,5 @@ spec:
         image: harbor.21vv.cn/library/nginx:latest
         ports:
         - containerPort: 80
+        
+#sfsgfsdfg
